@@ -171,7 +171,7 @@ class _explorerState extends State<explorer> {
     cards(name: "Amal",
     subtitle: "Software Developer at ABC",
     date: "5 Hrs",
-    desc: "Accepted into Burbuon Coollege",
+    desc: "Accepted into Burbon Coollege",
     url: "https://images.unsplash.com/photo-1614796067785-93f746b74cce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
     ),
     
