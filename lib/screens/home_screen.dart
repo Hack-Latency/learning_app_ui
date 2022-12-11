@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Online',
+                  'Gamify ',
                   style: GoogleFonts.roboto(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     );
                   },
                   child: Text(
-                    'Master Class',
+                    'Learning',
                     style: GoogleFonts.roboto(
                       fontWeight: FontWeight.w500,
                       color: Colors.white,
@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     return const MyHorizontalList(
                         startColor: 0xFF9288E4,
                         endColor: 0xFF534EA7,
-                        courseHeadline: 'Recommended',
+                        courseHeadline: '200 Ace Points',
                         courseTitle: 'BOOST YOUR SKILLS',
                         courseImage: 'assets/images/img_saly10.png');
                   }),
@@ -77,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Free online class',
+                  'My Current Courses',
                   style: GoogleFonts.roboto(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
@@ -100,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 itemBuilder: (context, index) {
                   return const MyVerticalList(
                       courseImage: 'assets/images/img_saly24.png',
-                      courseTitle: 'Flutter Developer',
+                      courseTitle: 'Flutter Novice',
                       courseDuration: '8 Hourse',
                       courseRating: 3.0);
                 })

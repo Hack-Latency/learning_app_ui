@@ -19,14 +19,15 @@ class _MyVerticalDetailListState extends State<MyVerticalDetailList> {
         height: 82,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(19),
-            color: const Color(0xFF3E3A6D)),
+            color: const Color(0xFF3E3A6D)
+            ),
         child: Row(
           children: [
             Container(
               height: 82,
               width: 99,
               decoration: BoxDecoration(
-                color: const Color(0xFFDB61A1),
+                color: const Color(0xFF3E3A6D),
                 borderRadius: BorderRadius.circular(19),
                 image: const DecorationImage(
                   alignment: Alignment.bottomRight,

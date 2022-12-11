@@ -12,13 +12,14 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xFF3E3A6D),
         leading: Icon(Icons.arrow_back),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.share)),
           IconButton(onPressed: () {}, icon: Icon(Icons.person_add)),
         ],
         title: Text(
-          "Leaderboard",
+          "Leader board",
           style: TextStyle(fontSize: 29),
         ),
         centerTitle: true,
@@ -31,7 +32,15 @@ class _ProfileState extends State<Profile> {
               padding: EdgeInsets.only(top: 40),
               height: 330,
               decoration: BoxDecoration(
-                  color: Colors.purple,
+                  gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [
+                Color.fromARGB(255, 45, 27, 48),
+                Color.fromARGB(255, 77, 54, 122),
+              ],
+            ),
+          
                   borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(20),
                       bottomLeft: Radius.circular(20))),
@@ -53,7 +62,7 @@ class _ProfileState extends State<Profile> {
                               shape: BoxShape.circle, color: Colors.white),
                           child: Icon(
                             Icons.edit,
-                            color: Colors.purpleAccent,
+                            color: Color(0xFF3E3A6D),
                           ),
                         ),
                       )
@@ -92,7 +101,7 @@ class _ProfileState extends State<Profile> {
                                 fontWeight: FontWeight.w300,
                                 color: Colors.white.withOpacity(0.9)),
                           ),
-                          Text("points",
+                          Text("Ace Points",
                               style: TextStyle(
                                   fontSize: 19,
                                   fontWeight: FontWeight.bold,

@@ -69,7 +69,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                     height: 11,
                   ),
                   Text(
-                    'Graphic Design Master for Everyone',
+                    'Flutter Novice',
                     overflow: TextOverflow.ellipsis,
                     style: GoogleFonts.roboto(
                       fontWeight: FontWeight.w700,

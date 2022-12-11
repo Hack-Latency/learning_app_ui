@@ -42,7 +42,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 "https://cdn-icons-png.flaticon.com/512/186/186320.png"),
                           ),
                         ),
-                        Text("HTML")
+                        Text("HTML", style: TextStyle(fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -56,10 +56,45 @@ class _ProfilePageState extends State<ProfilePage> {
                                 "https://cdn-icons-png.flaticon.com/512/5968/5968242.png"),
                           ),
                         ),
-                        Text("CSS")
+                        Text("CSS",style: TextStyle(fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
+
+                  Container(
+                    child: Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(12),
+                          child: CircleAvatar(
+                            backgroundImage: NetworkImage(
+                                "https://cdn-icons-png.flaticon.com/128/919/919854.png"),
+                          ),
+                        ),
+                        Text("Java",style: TextStyle(fontWeight: FontWeight.bold),)
+                      ],
+                    ),
+                  ),
+                  
+                  
+                  Container(
+                    child: Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(12),
+                          child: CircleAvatar(
+                            backgroundImage: NetworkImage(
+                                "https://cdn-icons-png.flaticon.com/512/5611/5611084.png"),
+                          ),
+                        ),
+                        Text("Premiere Pro",style: TextStyle(fontWeight: FontWeight.bold),)
+                      ],
+                    ),
+                  ),
+
+                  SizedBox(width: 10,),
+
+
                   Container(
                     child: Column(
                       children: [
@@ -70,38 +105,12 @@ class _ProfilePageState extends State<ProfilePage> {
                                 "https://cdn-icons-png.flaticon.com/128/721/721671.png"),
                           ),
                         ),
-                        Text("JavaScript")
+                        Text("JavaScript",style: TextStyle(fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
-                  Container(
-                    child: Column(
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(12),
-                          child: CircleAvatar(
-                            backgroundImage: NetworkImage(
-                                "https://cdn-icons-png.flaticon.com/512/875/875209.png"),
-                          ),
-                        ),
-                        Text("React")
-                      ],
-                    ),
-                  ),
-                  Container(
-                    child: Column(
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(12),
-                          child: CircleAvatar(
-                            backgroundImage: NetworkImage(
-                                "https://cdn-icons-png.flaticon.com/128/6132/6132222.png"),
-                          ),
-                        ),
-                        Text("C++")
-                      ],
-                    ),
-                  ),
+
+
                   Container(
                     child: Column(
                       children: [
@@ -113,7 +122,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             ),
                           ),
                         ),
-                        Text("Python")
+                        Text("Python",style: TextStyle(fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -124,16 +133,98 @@ class _ProfilePageState extends State<ProfilePage> {
                           padding: EdgeInsets.all(12),
                           child: CircleAvatar(
                             backgroundImage: NetworkImage(
-                                "https://cdn-icons-png.flaticon.com/128/919/919854.png"),
+                                "https://cdn-icons-png.flaticon.com/512/3940/3940056.png"),
                           ),
                         ),
-                        Text("Java")
+                        Text("Graphic Design",style: TextStyle(fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
+                  
+                  
                 ],
               )),
           buildAbout(user),
+          SizedBox(
+            height: 24,
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 50),
+            child: Row(
+              children: [
+                Container(
+                  height: 70,
+                  width: 70,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: NetworkImage(
+                              "https://cdn-icons-png.flaticon.com/512/732/732221.png"))),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Container(
+                    width: 220,
+                    padding: EdgeInsets.all(8),
+                    child: RichText(
+                      text: TextSpan(
+                        text: 'Interned at Microsoft as ',
+                        style: DefaultTextStyle.of(context).style,
+                        children: <TextSpan>[
+                          TextSpan(
+                              text: 'Program Associate',
+                              style: TextStyle(fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                    )),
+              ],
+            ),
+          ),
+
+
+        SizedBox(
+         height: 10,
+        ),
+
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 50),
+            child: Row(
+              children: [
+                Container(
+                  height: 70,
+                  width: 70,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: NetworkImage(
+                              "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/160_Hackerrank_logo_logos-512.png"))),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Container(
+                    width: 220,
+                    padding: EdgeInsets.all(8),
+                    child: RichText(
+                      text: TextSpan(
+                        text: 'First Prize ',
+                        style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),
+                        
+                        children: <TextSpan>[
+                          TextSpan(
+                              text: 'at Hackerrank winter Challenge',
+                              style: DefaultTextStyle.of(context).style,
+                              ),
+                        ],
+                      ),
+                    )),
+              ],
+            ),
+          ),
+
+
+
+
+          
         ],
       ),
     );
@@ -236,6 +327,7 @@ class ButtonWidget extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           shape: StadiumBorder(),
           onPrimary: Colors.white,
+          backgroundColor: Color.fromARGB(255, 71, 42, 108),
           padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
         ),
         child: Text(text),
@@ -248,11 +340,10 @@ class NumbersWidget extends StatelessWidget {
   Widget build(BuildContext context) => Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          buildButton(context, '4.8', 'Ranking'),
+          buildButton(context, '1200', 'Ace Points'),
           buildDivider(),
-          buildButton(context, '35', 'Task Completed'),
-          buildDivider(),
-          buildButton(context, '50', 'Task Pending'),
+          buildButton(context, '7', 'Courses Completed'),
+          
         ],
       );
   Widget buildDivider() => Container(

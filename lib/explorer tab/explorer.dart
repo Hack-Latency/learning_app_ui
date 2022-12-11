@@ -166,13 +166,15 @@ class _explorerState extends State<explorer> {
     subtitle: "Intern at XYZ company",
     date: "2 Hrs",
     desc: "Finally",
-    url: "https://images.unsplash.com/photo-1614796067785-93f746b74cce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    url: "https://i.postimg.cc/rFRkkkhG/templ-copy.jpg",
+    profileurl: "https://images.unsplash.com/photo-1500048993953-d23a436266cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     ),
     cards(name: "Amal",
     subtitle: "Software Developer at ABC",
     date: "5 Hrs",
-    desc: "Accepted into Burbon Coollege",
-    url: "https://images.unsplash.com/photo-1614796067785-93f746b74cce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    desc: "This defenetly was not an easy task, but the satisaction level is quite worth it",
+    url: "https://i.postimg.cc/QtZbHpsx/REACT-MASTER.jpg",
+    profileurl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
     ),
     
          
@@ -189,13 +191,14 @@ class _explorerState extends State<explorer> {
 
 class cards extends StatelessWidget {
   const cards({
-    Key? key, required this.name, this.subtitle, this.date, this.desc, this.url
+    Key? key, required this.name, this.subtitle, this.date, this.desc, this.url, this.profileurl
   }) : super(key: key);
   final name;
   final subtitle;
   final date ; 
   final desc ; 
   final url ; 
+  final profileurl ; 
 
   @override
   Widget build(BuildContext context) {
@@ -219,12 +222,13 @@ class cards extends StatelessWidget {
               children: [
                 Container(
                   child: CircleAvatar(
-                    backgroundImage: NetworkImage("https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"),
+                    backgroundImage: NetworkImage(profileurl),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [Text(name,style:TextStyle(fontWeight: FontWeight.bold,fontSize: 17),),
                     Text(subtitle,style: TextStyle(fontSize: 14,color: Colors.blueGrey),)],
                   ),
@@ -240,7 +244,7 @@ class cards extends StatelessWidget {
         // Description
         Container(
           
-          child: Text(desc,),
+          child: Text(desc,style: TextStyle(fontWeight: FontWeight.bold),),
         ),
         
         SizedBox(height: 6,),
@@ -257,11 +261,11 @@ class cards extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
 
           children: [
-            Icon(Icons.comment,color: Colors.green,),
-            SizedBox(width: 5,),
-            Icon(Icons.thumb_up_sharp, color: Colors.green,),
-            SizedBox(width: 5,),
-            Icon(Icons.save,color: Colors.green,),
+            Icon(Icons.comment,color:Color.fromARGB(255, 45, 27, 48),),
+            SizedBox(width: 10,),
+            Icon(Icons.thumb_up_sharp, color: Color.fromARGB(255, 45, 27, 48),),
+            SizedBox(width: 10,),
+            Icon(Icons.save,color: Color.fromARGB(255, 45, 27, 48),),
           ],
         )
       ],
